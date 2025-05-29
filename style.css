@@ -1,0 +1,211 @@
+/* Sustainability theme colors */
+:root {
+  --header-bg: #e6f4ea; /* soft green background */
+  --logo-color: #2e5d34; /* deep green for logo */
+  --nav-link: #3b4d3a; /* earthy dark green */
+  --nav-link-hover: #b7d7c2; /* light green for hover */
+}
+
+/* Header styles */
+header {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically on mobile */
+  align-items: center; /* Center items horizontally */
+  padding: 16px 0;
+  background-color: var(--header-bg); /* Use nature-inspired green */
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 2em;
+  color: var(--logo-color); /* Deep green for logo */
+}
+
+.tree-icon {
+  display: block;
+  margin-bottom: 4px;
+}
+
+nav {
+  width: 100%;
+}
+
+.nav-links {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 16px 0 0 0;
+  display: flex;
+  flex-direction: column; /* Stack links vertically on mobile */
+  align-items: center;
+  gap: 12px; /* Space between links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--nav-link); /* Earthy green for links */
+  font-size: 1.1em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background: transparent;
+}
+
+.nav-links a:hover {
+  background: var(--nav-link-hover); /* Light green on hover */
+}
+
+/* Make nav links horizontal on larger screens */
+@media (min-width: 600px) {
+  .nav-links {
+    flex-direction: row; /* Arrange links horizontally */
+    justify-content: center; /* Center links horizontally */
+    align-items: center; /* Align links vertically */
+    gap: 24px; /* More space between links on desktop */
+  }
+  .logo {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    position: absolute;
+    left: 32px;
+    top: 24px;
+  }
+  header {
+    position: relative;
+    align-items: flex-start;
+    padding-left: 100px;
+  }
+  .tree-icon {
+    margin-bottom: 0;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+  }
+}
+
+/* Hero section styles */
+.hero {
+  background: #f5faf7; /* Soft, light green background */
+  text-align: center; /* Center text */
+  padding: 40px 16px; /* Space around content */
+  margin: 24px 0 0 0; /* Space above hero section */
+  border-radius: 8px; /* Slightly rounded corners */
+}
+
+.hero h2 {
+  color: var(--logo-color); /* Use deep green for headline */
+  margin-bottom: 16px;
+  font-size: 2em;
+}
+
+.hero p {
+  color: #3b4d3a; /* Earthy green for paragraph */
+  font-size: 1.1em;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+/* Call to Action Button styles */
+.cta-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 28px;
+  background: var(--logo-color); /* Deep green background */
+  color: #fff; /* White text */
+  font-size: 1.1em;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cta-btn:hover {
+  background: #3b4d3a; /* Slightly darker green on hover */
+}
+
+/* Cards section styles */
+.cards-section {
+  margin: 40px 0;
+  padding: 0 8px;
+}
+
+.cards-section h2 {
+  text-align: center;
+  color: var(--logo-color);
+  margin-bottom: 24px;
+}
+
+.cards-container {
+  display: flex; /* Use flexbox for horizontal layout */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 16px; /* Space between cards */
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory; /* Smooth snap scrolling */
+}
+
+.card {
+  min-width: 240px;
+  background: #f5faf7; /* Soft background */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(46,93,52,0.08);
+  padding: 20px;
+  flex: 0 0 auto; /* Prevent cards from shrinking */
+  scroll-snap-align: start;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--logo-color);
+  font-size: 1.2em;
+}
+
+.price {
+  color: #388e3c;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.amenities {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+
+.amenities li {
+  color: #3b4d3a;
+  font-size: 0.98em;
+  margin-bottom: 4px;
+}
+
+.card-desc {
+  color: #388e3c;
+  font-size: 0.98em;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* Show scrollbar only when scrolling */
+.cards-container::-webkit-scrollbar {
+  height: 8px;
+  background: #e6f4ea;
+}
+.cards-container::-webkit-scrollbar-thumb {
+  background: #b7d7c2;
+  border-radius: 4px;
+}
